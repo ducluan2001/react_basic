@@ -1,17 +1,16 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './example/MyComponent';
+// import MyComponent from './example/MyComponent';
+import MyForm from './example/MyForm';
 
 const App = () => {
     return (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <p>hello world! ok</p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-                <MyComponent />
+                <p>Lean React HoiDanIT!</p>
+                {/* <MyComponent /> */}
+                <MyForm />
             </header>
         </div>
     );

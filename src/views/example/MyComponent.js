@@ -21,13 +21,19 @@ class MyComponent extends React.Component {
         return (
             <>
                 <div>
-                    <input type="text" value={this.state.name} onChange={(event) => this.handleOnChangeName(event)} />{' '}
+                    <input
+                        type="text"
+                        value={this.state.name}
+                        onChange={(event) => this.handleOnChangeName(event)}
+                    />
                     <br />
                     hello my name {this.state.name}
                 </div>
                 <div>i am {this.state.age} year old</div>
                 <div className="third">
-                    <button onClick={() => this.handleClickButton()}>Click me!</button>
+                    <button onClick={() => this.handleClickButton()}>
+                        Click me!
+                    </button>
                 </div>
             </>
         );
