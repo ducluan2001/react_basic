@@ -1,14 +1,15 @@
 import React from 'react';
 import ChildComponent from './ChildComponent';
+import AppComponent from './AddComponent';
 
 class MyForm extends React.Component {
     state = {
         FistName: '',
         LastName: '',
         arrJobs: [
-            { id: 'job1', title: 'dev', salary: '500$' },
-            { id: 'job2', title: 'tester', salary: '600$' },
-            { id: 'job3', title: 'leader', salary: '1500$' },
+            { id: 'job1', title: 'dev', salary: '500' },
+            { id: 'job2', title: 'tester', salary: '600' },
+            { id: 'job3', title: 'leader', salary: '1500' },
         ],
     };
     handleChangeFistName = (event) => {
@@ -29,6 +30,7 @@ class MyForm extends React.Component {
     render() {
         return (
             <>
+                <AppComponent />
                 <form action="">
                     <label htmlFor="fname">Fist Name: </label>
                     <br />
@@ -51,13 +53,13 @@ class MyForm extends React.Component {
                         value="Submit"
                         onClick={(event) => this.handleSubmit(event)}
                     />
-                    <ChildComponent
-                        name={this.state.FistName + ' ' + this.state.LastName}
-                        age={'22'}
-                        address={'Bắc Kạn'}
-                        arrJobs={this.state.arrJobs}
-                    />
                 </form>
+                <ChildComponent
+                    name={this.state.FistName + ' ' + this.state.LastName}
+                    age={'22'}
+                    address={'Bắc Kạn'}
+                    arrJobs={this.state.arrJobs}
+                />
             </>
         );
     }
