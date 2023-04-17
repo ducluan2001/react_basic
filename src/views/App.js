@@ -3,6 +3,7 @@ import './App.scss';
 // import MyComponent from './example/MyComponent';
 import MyForm from './example/MyForm';
 
+// #15 : Split Components - Chia cắt Components Trong React.JS
 const App = () => {
     return (
         <div className="App">
