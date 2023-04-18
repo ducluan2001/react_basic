@@ -15,11 +15,21 @@ class MyForm extends React.Component {
             arrJobs: [...this.state.arrJobs, job],
         });
     };
+    deleteAJob = (job) => {
+        this.setState({
+            arrJobs: [
+                ...this.state.arrJobs.filter((item) => item.id !== job.id),
+            ],
+        });
+    };
     render() {
         return (
             <>
                 <AppComponent addNewJob={this.addNewJob} />
-                <ChildComponent arrJobs={this.state.arrJobs} />
+                <ChildComponent
+                    arrJobs={this.state.arrJobs}
+                    deleteAJob={this.deleteAJob}
+                />
             </>
         );
     }
